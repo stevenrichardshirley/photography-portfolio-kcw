@@ -1,0 +1,199 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* allow app to span the full page dimensions */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+}
+.masterhead {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 200px;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .masterhead {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+.masterhead .logo {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 50px;
+}
+.masterhead .logoimg {
+  width: 180px;
+  height: 85px;
+}
+.masterhead .hamburgermenu {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 9%;
+}
+.masterhead .hamburgermenu .hamburger {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 40px;
+  top: 80px;
+}
+.masterhead .hamburgermenu .hamburger div {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 40px;
+  position: absolute;
+}
+.masterhead .hamburgermenu .hamburger div:nth-child(1) {
+  top: 0px;
+}
+.masterhead .hamburgermenu .hamburger div:nth-child(2) {
+  top: 12px;
+}
+.masterhead .hamburgermenu .hamburger div:nth-child(3) {
+  top: 24px;
+}
+@media (min-width: 900px) {
+  .masterhead .hamburgermenu {
+    display: none;
+  }
+}
+.masterhead .bar {
+  display: none;
+}
+@media (min-width: 900px) {
+  .masterhead .bar {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .masterhead .bar a {
+    font-size: 14px;
+    padding: 0px 20px;
+  }
+}
+.portfoliosect {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-row-gap: 25px;
+}
+@media (min-width: 600px) {
+  .portfoliosect {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfoliosect {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+.portfoliosect .picture img {
+  height: 500px;
+  width: 100%;
+  object-fit: contain;
+}
+@media (min-width: 600px) {
+  .portfoliosect .picture img {
+    height: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfoliosect .picture img {
+    height: 300px;
+  }
+}
+.masterfoot {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.masterfoot .iconinsta {
+  height: 40px;
+  width: 40px;
+}
+.masterfoot .iconmail {
+  height: 42px;
+  width: 42px;
+}
+.masterfoot .iconfb {
+  height: 35px;
+  width: 35px;
+  margin-bottom: 3px;
+  margin-left: 3px;
+}
+.masterhead {
+  background-color: white;
+}
+.masterhead .bar {
+  color: #707070;
+}
+.masterhead .bar a {
+  font-family: 'Raleway', sans-serif;
+  color: #707070;
+  text-decoration: none;
+}
+.masterfoot {
+  color: #707070;
+  font-family: 'Raleway', sans-serif;
+}
+.modal {
+  grid-template-rows: 12.5% 75% 12.5%;
+  background: #FFF;
+  opacity: 0;
+  transition: opacity 1s;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+.modal span {
+  text-align: right;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.modal .bigimage {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.modal .bigimage img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.modal .prevnext {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+}
+.modal.visible {
+  opacity: 1;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "photography-portfolio-kcw",
+  "version": "1.0.0",
+  "description": "Professional Photography Portfolio Website for Kevin Curtis Walker.",
+  "main": "app.js",
+  "dependencies": {
+    "less": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build-css": "lessc css/style.less css/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenrichardshirley/photography-portfolio-kcw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenrichardshirley/photography-portfolio-kcw/issues"
+  },
+  "homepage": "https://github.com/stevenrichardshirley/photography-portfolio-kcw#readme"
+}
