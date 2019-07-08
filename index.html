@@ -13,7 +13,7 @@
     <!-- MODAL HTML -->
 
     <div class="modal" style="display: none">
-    <span onclick="exitImageViewer()">X</span>
+    <span onclick="exitImageViewer()" style="cursor: pointer;"><img src="./images/thy-x.png" class="thex" style="height: 25px; width: 25px;"></span>
     <div class="bigimage">
         <img>
     </div>
@@ -39,7 +39,7 @@
 </nav>
 
 <nav class="hamburgermenu">
-        <div class="hamburger">
+        <div class="hamburger" onclick="hamburgerMenu()">
             <div></div>
             <div></div>
             <div></div>
@@ -50,55 +50,55 @@
 
 <section class="portfoliosect">
 
-  <div class="picture" onclick="viewImage('alpine')">
+  <div class="picture" onclick="viewImage('alpine')" style="cursor: pointer;">
   <img src="./images/alpine.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('autumn')">
+  <div class="picture" onclick="viewImage('autumn')" style="cursor: pointer;">
   <img src="./images/autumn.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('bluemoon')">
+  <div class="picture" onclick="viewImage('bluemoon')" style="cursor: pointer;">
   <img src="./images/bluemoon.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('bluewater')">
+  <div class="picture" onclick="viewImage('bluewater')" style="cursor: pointer;">
   <img src="./images/bluewater.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('browngreysky')">
+  <div class="picture" onclick="viewImage('browngreysky')" style="cursor: pointer;">
   <img src="./images/browngreysky.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('canyon')">
+  <div class="picture" onclick="viewImage('canyon')" style="cursor: pointer;">
   <img src="./images/canyon.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('lights')">
+  <div class="picture" onclick="viewImage('lights')" style="cursor: pointer;">
   <img src="./images/lights.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('redmoon')">
+  <div class="picture" onclick="viewImage('redmoon')" style="cursor: pointer;">
   <img src="./images/redmoon.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('redview')">
+  <div class="picture" onclick="viewImage('redview')" style="cursor: pointer;">
   <img src="./images/redview.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('rust')">
+  <div class="picture" onclick="viewImage('rust')" style="cursor: pointer;">
   <img src="./images/rust.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('snowview')">
+  <div class="picture" onclick="viewImage('snowview')" style="cursor: pointer;">
   <img src="./images/snowview.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('waterfall')">
+  <div class="picture" onclick="viewImage('waterfall')" style="cursor: pointer;">
   <img src="./images/waterfall.jpg">
   </div>
 
-  <div class="picture" onclick="viewImage('yellow')">
+  <div class="picture" onclick="viewImage('yellow')" style="cursor: pointer;">
   <img src="./images/yellow.jpg">
   </div>
 
@@ -133,6 +133,16 @@ THIS SITE WAS DESIGNED AND DEVELOPED BY STEVEN SHIRLEY
   </div>
 
 </footer>
+
+<nav class="hamburgermenu-sidebar">
+    <a href="">NATURE</a>
+    <a href="">COMMUNITY</a>
+    <a href="">WOMEN</a>
+    <a href="">MEN</a>
+    <a href="">ABOUT</a>
+    <a href="">CONTACT</a>
+</nav>
+
 
 <script src="./app.js"></script>
 

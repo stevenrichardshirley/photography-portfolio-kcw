@@ -2,7 +2,7 @@
 const header = document.getElementsByClassName("masterhead")[0];
 const portfolio = document.getElementsByClassName("portfoliosect")[0];
 const footer = document.getElementsByClassName("masterfoot")[0];
-
+const hamburger = document.getElementsByClassName("hamburger")[0];
 // modal, for viewing enlarged images, and the image object
 const modal = document.getElementsByClassName("modal")[0];
 const modalImage = document.getElementsByClassName("bigimage")[0].children[0];
@@ -33,7 +33,7 @@ function sleep(ms) {
 // opens image modal and navigates to correct image
 async function viewImage(imageName) {
     goToImage(imageName);
-    modal.style.display = "block";
+    modal.style.display = "grid";
     await sleep(50);
 
     modal.classList.add("visible");
@@ -56,4 +56,26 @@ async function exitImageViewer() {
     document.body.style.overflowY = "scroll";
     await sleep(500);
     modal.style.display = "none";
+}
+
+function hamburgerMenu() {
+    if (!hamburger.classList.contains("hamburger-transition")) {
+        hamburger.classList.add("hamburger-transition")
+    }
+    if (hamburger.classList.contains("menuopen")) {
+        hamburger.classList.remove("menuopen");
+
+
+        header.classList.remove("menuopen");
+        portfolio.classList.remove("menuopen");
+        footer.classList.remove("menuopen");
+    }
+    else {
+        header.classList.add("menuopen");
+        portfolio.classList.add("menuopen");
+        footer.classList.add("menuopen");
+
+
+        hamburger.classList.add("menuopen");
+    }
 }

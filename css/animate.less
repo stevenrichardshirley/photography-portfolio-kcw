@@ -1,0 +1,64 @@
+@keyframes hamburger-top-forward {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(0px, 12px) rotate(0deg); }
+    100% { transform: translate(0px, 12px) rotate(45deg); }
+}
+@keyframes hamburger-middle-forward {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    51% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes hamburger-bottom-forward {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(0px, -12px) rotate(0deg); }
+    100% { transform: translate(0px, -12px) rotate(-45deg); }
+}
+@keyframes hamburger-top-reverse {
+    0% { transform: translate(0px, 12px) rotate(45deg); }
+    50% { transform: translate(0px, 12px) rotate(0deg); }
+    100% { transform: translate(0px, 0px); }
+}
+@keyframes hamburger-middle-reverse {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    51% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes hamburger-bottom-reverse {
+    0% { transform: translate(0px, -12px) rotate(-45deg); }
+    50% { transform: translate(0px, -12px) rotate(0deg); }
+    100% { transform: translate(0px, 0px); }
+}
+
+.hamburger-transition > div:nth-child(1) {
+    animation-name: hamburger-top-reverse;
+    animation-duration: 1s;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+.hamburger-transition > div:nth-child(2) {
+    animation-name: hamburger-middle-reverse;
+    animation-duration: 1s;
+    opacity: 1;
+}
+.hamburger-transition > div:nth-child(3) {
+    animation-name: hamburger-bottom-reverse;
+    animation-duration: 1s;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+.hamburger-transition.menuopen > div:nth-child(1) {
+    animation-name: hamburger-top-forward;
+    animation-duration: 1s;
+    transform: translate(0px, 12px) rotate(45deg);
+}
+.hamburger-transition.menuopen > div:nth-child(2) {
+    animation-name: hamburger-middle-forward;
+    animation-duration: 1s;
+    opacity: 0;
+}
+.hamburger-transition.menuopen > div:nth-child(3) {
+    animation-name: hamburger-bottom-forward;
+    animation-duration: 1s;
+    transform: translate(0px, -12px) rotate(-45deg);
+}
