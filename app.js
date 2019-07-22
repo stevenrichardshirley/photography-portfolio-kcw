@@ -79,3 +79,18 @@ function hamburgerMenu() {
         hamburger.classList.add("menuopen");
     }
 }
+
+function nextImage() {
+    imageIndex++;
+    if (imageIndex === images.length) {
+        imageIndex = 0;
+    }
+    goToImage(images[imageIndex]);
+}
+function prevImage() {
+    if (imageIndex === 0) {
+        imageIndex = images.length;
+    }
+    imageIndex--;
+    goToImage(images[imageIndex]);
+}
